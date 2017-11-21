@@ -23,7 +23,7 @@ export class ConnectApiService {
 
 
   getResponse(params?: string) {
-    const apiKey: string = 'AIzaSyDfLojsHY97Aay877j6NpKcd4qcIkzyWxY';
+    const apiKey: string = 'Here pass your api key';
     const keyParam: string = '&key=' + apiKey;
     const queryUrl: string = this.createLink(params);
     return this.http.get(queryUrl + keyParam);
