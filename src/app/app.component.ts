@@ -57,9 +57,10 @@ export class AppComponent {
     }
     for (let key in this.searchForm.value) {
       if (this.searchForm.value[key] !== '') {
-        paramString += '&?' + key + '=' + this.searchForm.value[key];
+        paramString += '&' + key + '=' + this.searchForm.value[key];
       }
     }
+    console.log(this.query);
     this.query = paramString;
     return paramString;
   }
