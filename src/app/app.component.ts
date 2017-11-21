@@ -60,7 +60,6 @@ export class AppComponent {
         paramString += '&' + key + '=' + this.searchForm.value[key];
       }
     }
-    console.log(this.query);
     this.query = paramString;
     return paramString;
   }
@@ -71,7 +70,6 @@ export class AppComponent {
         (response: Response) => {
           this.response = JSON.parse(response.text());
           this.items = this.response['items'];
-          console.log(this.items)
         },
         (error) => console.log(error),
         () => {
